@@ -142,7 +142,7 @@ var mk_block = Markdown.mk_block = function(block, trail, line) {
 
   var s = new String(block);
   s.trailing = trail;
-  // To make it clear its not just a string
+  // To body it clear its not just a string
   s.inspect = mk_block_inspect;
   s.toSource = mk_block_toSource;
 
@@ -698,14 +698,14 @@ Markdown.dialects.Gruber = {
       if ( !block.match(re) )
         return undefined;
 
-      // make an attribute node if it doesn't exist
+      // body an attribute node if it doesn't exist
       if ( !extract_attr( this.tree ) ) {
         this.tree.splice( 1, 0, {} );
       }
 
       var attrs = extract_attr( this.tree );
 
-      // make a references hash if it doesn't exist
+      // body a references hash if it doesn't exist
       if ( attrs.references === undefined ) {
         attrs.references = {};
       }
@@ -765,7 +765,7 @@ Markdown.dialects.Gruber.inline = {
                   this,
                   text.substr( m.index ), m, previous_nodes || [] );
       }
-      // Default for now to make dev easier. just slurp special and output it.
+      // Default for now to body dev easier. just slurp special and output it.
       res = res || [ m[2].length, m[2] ];
       return res;
     },
@@ -1098,7 +1098,7 @@ Markdown.DialectHelpers.inline_until_char = function( text, want ) {
   }
 }
 
-// Helper function to make sub-classing a dialect easier
+// Helper function to body sub-classing a dialect easier
 Markdown.subclassDialect = function( d ) {
   function Block() {}
   Block.prototype = d.block;
@@ -1155,7 +1155,7 @@ function split_meta_hash( meta_string ) {
         if ( in_quotes ) {
           parts[ parts.length - 1 ] += letter;
         }
-        // otherwise make a new part
+        // otherwise body a new part
         else {
           parts.push( "" );
         }
@@ -1185,7 +1185,7 @@ Markdown.dialects.Maruku.block.document_meta = function document_meta( block, ne
   // document_meta blocks consist of one or more lines of `Key: Value\n`
   if ( ! block.match( /^(?:\w+:.*\n)*\w+:.*$/ ) ) return undefined;
 
-  // make an attribute node if it doesn't exist
+  // body an attribute node if it doesn't exist
   if ( !extract_attr( this.tree ) ) {
     this.tree.splice( 1, 0, {} );
   }
@@ -1240,7 +1240,7 @@ Markdown.dialects.Maruku.block.block_meta = function block_meta( block, next ) {
   var b = block.replace( /\n.*$/, "" ),
       result = this.processBlock( b, [] );
 
-  // get or make the attributes hash
+  // get or body the attributes hash
   hash = extract_attr( result[ 0 ] );
   if ( !hash ) {
     hash = {};
@@ -1514,7 +1514,7 @@ function convert_tree_to_html( tree, references, options ) {
       // grab this ref and clean up the attribute node
       var ref = references[ attrs.ref ];
 
-      // if the reference exists, make the link
+      // if the reference exists, body the link
       if ( ref ) {
         delete attrs.ref;
 
@@ -1538,7 +1538,7 @@ function convert_tree_to_html( tree, references, options ) {
       // grab this ref and clean up the attribute node
       var ref = references[ attrs.ref ];
 
-      // if the reference exists, make the link
+      // if the reference exists, body the link
       if ( ref ) {
         delete attrs.ref;
 

@@ -195,7 +195,7 @@
 							</div>
 						</div>
 						<div class="ibox-content">
-							<div class="text-center">
+							<div class="text-center-">
 								<a data-toggle="modal" class="btn btn-primary" href="form_basic.html#modal-form">打开登录窗口</a>
 							</div>
 						</div>
@@ -231,13 +231,16 @@
 						</div>
 						<div class="ibox-content">
 							<form method="get" class="form-horizontal">
+
 								<div class="form-group">
 									<label class="col-sm-2 control-label">普通</label>
 									<div class="col-sm-10">
 										<input type="text" class="form-control">
 									</div>
 								</div>
+
 								<div class="hr-line-dashed"></div>
+
 								<div class="form-group">
 									<label class="col-sm-2 control-label">带说明信息</label>
 									<div class="col-sm-10">
@@ -245,6 +248,7 @@
 										<span class="help-block m-b-none">帮助文本，可能会超过一行，以块级元素显示</span>
 									</div>
 								</div>
+
 								<div class="hr-line-dashed"></div>
 								<div class="form-group">
 									<label class="col-sm-2 control-label">密码</label>
@@ -305,6 +309,8 @@
 									</div>
 								</div>
 								<div class="hr-line-dashed"></div>
+
+
 								<div class="form-group">
 									<label class="col-sm-2 control-label">复选框&amp;单选框 <br />
 										<small class="text-navy">自定义样式</small>
@@ -339,6 +345,8 @@
 										</div>
 									</div>
 								</div>
+
+
 								<div class="hr-line-dashed"></div>
 								<div class="form-group">
 									<label class="col-sm-2 control-label">内联复选框</label>
@@ -358,6 +366,7 @@
 											<option>选项 3</option>
 											<option>选项 4</option>
 										</select>
+
 										<div class="col-sm-4 m-l-n">
 											<select class="form-control" multiple="">
 												<option>选项 1</option>
@@ -606,7 +615,12 @@
 		<script src="js/content.min.js?v=1.0.0"></script>
 		<script src="js/plugins/iCheck/icheck.min.js"></script>
 		<script>
-			$(document).ready(function () {$(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})});
+			$(document).ready(function () {
+				$(".i-checks").iCheck({
+					checkboxClass: "icheckbox_square-green",
+					radioClass   : "iradio_square-green",
+				})
+			});
 		</script>
 
 	</body>

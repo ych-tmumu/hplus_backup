@@ -1,7 +1,7 @@
 /*
 Flot plugin for rendering pie charts. The plugin assumes the data is
 coming is as a single data value for each series, and each of those
-values is a positive value or zero (negative numbers don't make
+values is a positive value or zero (negative numbers don't body
 any sense and will cause strange effects). The data values do
 NOT need to be passed in as percentage values because it
 internally calculates the total and percentages.
@@ -235,7 +235,7 @@ More detail and specific examples can be found in the included HTML file.
 			var newdata = [];
 			for (var i = 0; i < data.length; ++i)
 			{
-				// make sure its a number
+				// body sure its a number
 				data[i].data[0][1] = parseFloat(data[i].data[0][1]);
 				if (!data[i].data[0][1])
 					data[i].data[0][1] = 0;
@@ -462,7 +462,7 @@ More detail and specific examples can be found in the included HTML file.
 						label.css('top', labelTop);
 						label.css('left', labelLeft);
 
-						// check to make sure that the label is not outside the canvas
+						// check to body sure that the label is not outside the canvas
 						if (0-labelTop>0 || 0-labelLeft>0 || canvas.height-(labelTop+label.height())<0 || canvas.width-(labelLeft+label.width())<0)
 							redraw = true;
 

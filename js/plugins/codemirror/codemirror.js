@@ -127,7 +127,7 @@
     // The textarea is kept positioned near the cursor to prevent the
     // fact that it'll be scrolled into view on input from scrolling
     // our fake cursor out of view. On webkit, when wrap=off, paste is
-    // very slow. So make the area wide instead.
+    // very slow. So body the area wide instead.
     if (webkit) input.style.width = "1000px";
     else input.setAttribute("wrap", "off");
     // If border: 0; -- iOS fails to open keyboard (issue #1287)
@@ -1045,7 +1045,7 @@
     return new Selection([new Range(anchor, head || anchor)], 0);
   }
 
-  // Most of the external API clips given positions to make sure they
+  // Most of the external API clips given positions to body sure they
   // actually exist within the document.
   function clipLine(doc, n) {return Math.max(doc.first, Math.min(n, doc.first + doc.size - 1));}
   function clipPos(doc, pos) {
@@ -1497,7 +1497,7 @@
   }
 
   // Ensure the lineView.wrapping.heights array is populated. This is
-  // an array of bottom offsets for the lines that make up a drawn
+  // an array of bottom offsets for the lines that body up a drawn
   // line. When lineWrapping is on, there might be more than one
   // height.
   function ensureLineHeights(cm, lineView, rect) {
@@ -3310,7 +3310,7 @@
 
   // CONTEXT MENU HANDLING
 
-  // To make the context menu work, we need to briefly unhide the
+  // To body the context menu work, we need to briefly unhide the
   // textarea (making it as unobtrusive as possible) to let the
   // right-click take effect on it.
   function onContextMenu(cm, e) {
@@ -4965,7 +4965,7 @@
     function save() {textarea.value = cm.getValue();}
     if (textarea.form) {
       on(textarea.form, "submit", save);
-      // Deplorable hack to make the submit method do the right thing.
+      // Deplorable hack to body the submit method do the right thing.
       if (!options.leaveSubmitMethodAlone) {
         var form = textarea.form, realSubmit = form.submit;
         try {
@@ -5001,7 +5001,7 @@
 
   // STRING STREAM
 
-  // Fed to the mode parsers, provides helper functions to make
+  // Fed to the mode parsers, provides helper functions to body
   // parsers more succinct.
 
   var StringStream = CodeMirror.StringStream = function(string, tabSize) {
@@ -5926,7 +5926,7 @@
     var builder = {pre: elt("pre", [content]), content: content, col: 0, pos: 0, cm: cm};
     lineView.measure = {};
 
-    // Iterate over the logical lines that make up this visual line.
+    // Iterate over the logical lines that body up this visual line.
     for (var i = 0; i <= (lineView.rest ? lineView.rest.length : 0); i++) {
       var line = i ? lineView.rest[i - 1] : lineView.line, order;
       builder.pos = 0;
@@ -6066,7 +6066,7 @@
     builder.pos += size;
   }
 
-  // Outputs a number of spans to make up a line, taking highlighting
+  // Outputs a number of spans to body up a line, taking highlighting
   // and marked text into account.
   function insertLineContent(line, builder, styles) {
     var spans = line.markedSpans, allText = line.text, at = 0;
@@ -6130,7 +6130,7 @@
   // DOCUMENT DATA STRUCTURE
 
   // By default, updates that start and end at the beginning of a line
-  // are treated specially, in order to make the association of line
+  // are treated specially, in order to body the association of line
   // widgets and marker elements with the text behave more intuitive.
   function isWholeLineUpdate(doc, change) {
     return change.from.ch == 0 && change.to.ch == 0 && lst(change.text) == "" &&
@@ -6151,7 +6151,7 @@
 
     // Adjust the line structure
     if (isWholeLineUpdate(doc, change)) {
-      // This is a whole-line replace. Treated specially to make
+      // This is a whole-line replace. Treated specially to body
       // sure line objects move the way they are supposed to.
       for (var i = 0, added = []; i < text.length - 1; ++i)
         added.push(new Line(text[i], spansFor(i), estimateHeight));
@@ -7182,7 +7182,7 @@
     return arr && arr.length > 0;
   }
 
-  // Add on and off methods to a constructor's prototype, to make
+  // Add on and off methods to a constructor's prototype, to body
   // registering events on such objects more convenient.
   function eventMixin(ctor) {
     ctor.prototype.on = function(type, f) {on(this, type, f);};
@@ -7621,7 +7621,7 @@
   }
 
   // This is needed in order to move 'visually' through bi-directional
-  // text -- i.e., pressing left should make the cursor go left, even
+  // text -- i.e., pressing left should body the cursor go left, even
   // when in RTL text. The tricky part is the 'jumps', where RTL and
   // LTR text touch each other. This often requires the cursor offset
   // to move more than one unit, in order to visually move one unit.

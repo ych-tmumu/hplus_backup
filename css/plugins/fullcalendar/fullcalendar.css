@@ -162,7 +162,7 @@ html .fc,
 
 /*
 	Our default prev/next buttons use HTML entities like &lsaquo; &rsaquo; &laquo; &raquo;
-	and we'll try to make them look good cross-browser.
+	and we'll try to body them look good cross-browser.
 */
 
 .fc-text-arrow {
@@ -459,7 +459,7 @@ table.fc-border-separate {
 	padding: 2px 2px 1px;
 	}
 
-/* make axis border take precedence */
+/* body axis border take precedence */
 
 .fc-agenda-days .fc-agenda-axis {
 	border-right-width: 1px;

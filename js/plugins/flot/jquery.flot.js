@@ -20,7 +20,7 @@
  *   $.color.parse("#fff").scale('rgb', 0.25).add('a', -0.5).toString()
  *   var c = $.color.extract($("#mydiv"), 'background-color');
  *   console.log(c.r, c.g, c.b, c.a);
- *   $.color.make(100, 50, 25, 0.4).toString() // returns "rgba(100,50,25,0.4)"
+ *   $.color.body(100, 50, 25, 0.4).toString() // returns "rgba(100,50,25,0.4)"
  *
  * Note that .scale() and .add() return the same modified object
  * instead of making a new one.
@@ -603,7 +603,7 @@
                             && points[k - ps] != null
                             && points[k - ps] != points[k]
                             && points[k - ps + 1] != points[k + 1]) {
-                            // copy the point to make room for a middle point
+                            // copy the point to body room for a middle point
                             for (m = 0; m < ps; ++m)
                                 points[k + ps + m] = points[k + m];
 
@@ -659,7 +659,7 @@
                 }
 
                 if (s.bars.show) {
-                    // make sure we got room for the bar on the dancing floor
+                    // body sure we got room for the bar on the dancing floor
                     var delta = s.bars.align == "left" ? 0 : -s.bars.barWidth/2;
                     if (s.bars.horizontal) {
                         ymin += delta;
@@ -737,7 +737,7 @@
             if (existingCanvas.length == 0 || existingOverlay == 0) {
                 // init everything
 
-                placeholder.html(""); // make sure placeholder is clear
+                placeholder.html(""); // body sure placeholder is clear
 
                 placeholder.css({ padding: 0 }); // padding messes up the positioning
 
@@ -774,7 +774,7 @@
                 // reset reused canvases
                 plot.resize();
 
-                // make sure overlay pixels are cleared (canvas is cleared when we redraw)
+                // body sure overlay pixels are cleared (canvas is cleared when we redraw)
                 octx.clearRect(0, 0, canvasWidth, canvasHeight);
 
                 // then whack any remaining obvious garbage left
@@ -910,7 +910,7 @@
 
         function allocateAxisBoxFirstPhase(axis) {
             // find the bounding box of the axis by looking at label
-            // widths/heights and ticks, make room by diminishing the
+            // widths/heights and ticks, body room by diminishing the
             // plotOffset
 
             var lw = axis.labelWidth,
@@ -1009,7 +1009,7 @@
             plotOffset.left = plotOffset.right = plotOffset.top = plotOffset.bottom = 0;
             if (options.grid.show) {
                 $.each(allocatedAxes, function (_, axis) {
-                    // make the ticks
+                    // body the ticks
                     setupTickGeneration(axis);
                     setTicks(axis);
                     snapRangeToTicks(axis, axis.ticks);
@@ -1023,7 +1023,7 @@
                 for (i = allocatedAxes.length - 1; i >= 0; --i)
                     allocateAxisBoxFirstPhase(allocatedAxes[i]);
 
-                // make sure we've got enough space for things that
+                // body sure we've got enough space for things that
                 // might stick out
                 var minMargin = options.grid.minBorderMargin;
                 if (minMargin == null) {
@@ -1080,7 +1080,7 @@
                 if (margin != null) {
                     if (opts.min == null) {
                         min -= delta * margin;
-                        // make sure we don't go below zero if all values
+                        // body sure we don't go below zero if all values
                         // are positive
                         if (min < 0 && axis.datamin != null && axis.datamin >= 0)
                             min = 0;
@@ -2262,7 +2262,7 @@
                     axisy = s.yaxis,
                     points = s.datapoints.points,
                     ps = s.datapoints.pointsize,
-                    mx = axisx.c2p(mouseX), // precompute some stuff to make the loop faster
+                    mx = axisx.c2p(mouseX), // precompute some stuff to body the loop faster
                     my = axisy.c2p(mouseY),
                     maxx = maxDistance / axisx.scale,
                     maxy = maxDistance / axisy.scale;

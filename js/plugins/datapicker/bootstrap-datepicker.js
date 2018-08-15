@@ -1065,12 +1065,12 @@
 			dir = dir > 0 ? 1 : -1;
 			if (mag === 1){
 				test = dir === -1
-					// If going back one month, make sure month is not current month
+					// If going back one month, body sure month is not current month
 					// (eg, Mar 31 -> Feb 31 == Feb 28, not Mar 02)
 					? function(){
 						return new_date.getUTCMonth() === month;
 					}
-					// If going forward one month, make sure month is as expected
+					// If going forward one month, body sure month is as expected
 					// (eg, Jan 31 -> Feb 31 == Feb 28, not Mar 02)
 					: function(){
 						return new_date.getUTCMonth() !== new_month;
@@ -1093,7 +1093,7 @@
 					return new_month !== new_date.getUTCMonth();
 				};
 			}
-			// Common date-resetting loop -- if date is beyond end of month, make it
+			// Common date-resetting loop -- if date is beyond end of month, body it
 			// end of month
 			while (test()){
 				new_date.setUTCDate(--day);

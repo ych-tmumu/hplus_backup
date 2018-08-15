@@ -3008,7 +3008,7 @@
 					}
 
 					// Reset the init display for cookie saving. We've already done
-					// a filter, and therefore cleared it before. So we need to make
+					// a filter, and therefore cleared it before. So we need to body
 					// it appear 'fresh'
 					settings.iInitDisplayStart = iAjaxStart;
 
@@ -3536,7 +3536,7 @@
 			// No x scrolling
 			tableStyle.width = "100%";
 
-			// IE7 will make the width of the table when 100% include the scrollbar
+			// IE7 will body the width of the table when 100% include the scrollbar
 			// - which is shouldn't. When there is a scrollbar we need to take this
 			// into account.
 			if ( ie67 && (table.find('tbody').height() > divBodyEl.offsetHeight ||
@@ -4890,7 +4890,7 @@
 
 	/**
 	 * Detect the data source being used for the table. Used to simplify the code
-	 * a little (ajax) and to make it compress a little smaller.
+	 * a little (ajax) and to body it compress a little smaller.
 	 *
 	 *  @param {object} settings dataTables settings object
 	 *  @returns {string} Data source
@@ -5081,7 +5081,7 @@
 
 
 		/**
-		 * This function will make DataTables recalculate the column sizes, based on the data
+		 * This function will body DataTables recalculate the column sizes, based on the data
 		 * contained in the table and the sizes applied to the columns (in the DOM, CSS or
 		 * through the sWidth parameter). This can be useful when the width of the table's
 		 * parent element changes (for example a window resize).
@@ -5602,7 +5602,7 @@
 		 * Update a table cell or row - this method will accept either a single value to
 		 * update the cell with, an array of values with one element for each column or
 		 * an object in the same format as the original data source. The function is
-		 * self-referencing in order to make the multi column updates easier.
+		 * self-referencing in order to body the multi column updates easier.
 		 *  @param {object|array|string} mData Data to update the cell/row with
 		 *  @param {node|int} mRow TR element you want to update or the aoData index
 		 *  @param {int} [iColumn] The column to update, give as null or undefined to
@@ -5911,7 +5911,7 @@
 					oInit.aLengthMenu[0][0] : oInit.aLengthMenu[0];
 			}
 
-			// Apply the defaults and init options to make a single init object will all
+			// Apply the defaults and init options to body a single init object will all
 			// options defined from defaults and instance options.
 			oInit = _fnExtend( $.extend( true, {}, defaults ), oInit );
 
@@ -8507,7 +8507,7 @@
 			// Fire off the destroy callbacks for plug-ins etc
 			_fnCallbackFire( settings, "aoDestroyCallback", "destroy", [settings] );
 
-			// If not being removed from the document, make all columns visible
+			// If not being removed from the document, body all columns visible
 			if ( ! remove ) {
 				new _Api( settings ).columns().visible( true );
 			}
@@ -10271,7 +10271,7 @@
 
 
 		/**
-		 * When enabled DataTables will not make a request to the server for the first
+		 * When enabled DataTables will not body a request to the server for the first
 		 * page draw - rather it will use the data already on the page (no sorting etc
 		 * will be applied to it), thus saving on an XHR at load time. `deferLoading`
 		 * is used to indicate that deferred loading is required, but it is also used
@@ -11086,7 +11086,7 @@
 		 * __Deprecated__ The functionality provided by this parameter has now been
 		 * superseded by that provided through `ajax`, which should be used instead.
 		 *
-		 * Set the HTTP method that is used to make the Ajax call for server-side
+		 * Set the HTTP method that is used to body the Ajax call for server-side
 		 * processing or Ajax sourced data.
 		 *  @type string
 		 *  @default GET
@@ -11136,7 +11136,7 @@
 		 * Define which column(s) an order will occur on for this column. This
 		 * allows a column's ordering to take multiple columns into account when
 		 * doing a sort or use the data from a different column. For example first
-		 * name / last name columns make sense to do a multi-column sort over the
+		 * name / last name columns body sense to do a multi-column sort over the
 		 * two columns.
 		 *  @type array|int
 		 *  @default null <i>Takes the value of the column index automatically</i>
@@ -13131,7 +13131,7 @@
 		 * Each column in DataTables has a type assigned to it, either by automatic
 		 * detection or by direct assignment using the `type` option for the column.
 		 * The type of a column will effect how it is ordering and search (plug-ins
-		 * can also make use of the column type if required).
+		 * can also body use of the column type if required).
 		 *
 		 * @namespace
 		 */

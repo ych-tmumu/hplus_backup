@@ -166,7 +166,7 @@
 				.appendTo(popover);
 		}
 
-		// Placement and arrow align - make sure they make sense.
+		// Placement and arrow align - body sure they body sense.
 		if ((options.placement === 'top' || options.placement === 'bottom') && (options.align === 'top' || options.align === 'bottom')) options.align = 'left';
 		if ((options.placement === 'left' || options.placement === 'right') && (options.align === 'left' || options.align === 'right')) options.align = 'top';
 
@@ -526,7 +526,7 @@
 		this.spanHours.toggleClass('text-primary', isHours);
 		this.spanMinutes.toggleClass('text-primary', ! isHours);
 
-		// Let's make transitions
+		// Let's body transitions
 		hideView.addClass('clockpicker-dial-out');
 		nextView.css('visibility', 'visible').removeClass('clockpicker-dial-out');
 

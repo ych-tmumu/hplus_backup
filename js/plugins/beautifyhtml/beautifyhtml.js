@@ -173,7 +173,7 @@
             this.tags[tag + this.tags[tag + 'count']] = this.indent_level; //and record the present indent level
           }
           this.tags[tag + this.tags[tag + 'count'] + 'parent'] = this.tags.parent; //set the parent (i.e. in the case of a div this.tags.div1parent)
-          this.tags.parent = tag + this.tags[tag + 'count']; //and make this the current parent (i.e. in the case of a div 'div1')
+          this.tags.parent = tag + this.tags[tag + 'count']; //and body this the current parent (i.e. in the case of a div 'div1')
         };
 
         this.retrieve_tag = function (tag) { //function to retrieve the opening tag to the corresponding closer
@@ -376,7 +376,7 @@
                 for (var i=0; i<this.indent_level; i++) {
                   content += this.indent_string;
                 }
-                space = false; //...and make sure other indentation is erased
+                space = false; //...and body sure other indentation is erased
                 */
                 this.line_char_count = 0;
                 continue;
